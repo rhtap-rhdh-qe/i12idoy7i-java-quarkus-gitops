@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: i12idoy7i-java-quarkus
+  janus-idp.io/tekton: i12idoy7i-java-quarkus
+  backstage.io/kubernetes-id: i12idoy7i-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: i12idoy7i-java-quarkus
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
